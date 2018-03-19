@@ -1,0 +1,16 @@
+[
+{
+  "modid": "simplesorcery",
+  "name": "Simple Sorcery",
+  "description": "Simple spellcasting designed to extend existing Minecraft mechanics.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Snackhole"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "GRG",
+    "OSR",
+    "GOG"
+  ],
+  "key": {
+    "S": {
+      "item": "minecraft:diamond_shovel"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    },
+    "G": {
+      "item": "minecraft:gold_ingot"
+    },
+    "O": {
+      "item": "minecraft:glowstone_dust"
+    }
+  },
+  "result": {
+    "item": "simplesorcery:sorcerous_shovel"
+  }
+}

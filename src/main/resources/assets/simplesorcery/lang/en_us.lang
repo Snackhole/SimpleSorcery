@@ -1,0 +1,14 @@
+# Keys
+key.spell1.desc=Spell Slot 1 Key
+key.spell2.desc=Spell Slot 2 Key
+key.spell3.desc=Spell Slot 3 Key
+key.spellmod.desc=Switch Spells
+key.simplesorcery.category=Simple Sorcery
+
+# Items
+item.staff_of_sorcery.name=Staff of Sorcery
+item.sorcerous_sword.name=Sorcerous Sword
+item.sorcerous_pickaxe.name=Sorcerous Pickaxe
+item.sorcerous_shovel.name=Sorcerous Shovel
+item.sorcerous_hoe.name=Sorcerous Hoe
+item.sorcerous_axe.name=Sorcerous Axe
