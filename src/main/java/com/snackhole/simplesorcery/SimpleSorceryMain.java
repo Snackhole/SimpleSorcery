@@ -38,7 +38,7 @@ public class SimpleSorceryMain {
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
         PacketHandler.initPackets();
-        CapabilityManager.INSTANCE.register(ISorcery.class, new SorceryStorage(), Sorcery.class);
+        CapabilityManager.INSTANCE.register(ISorcery.class, new SorceryStorage(), Sorcery::new);
         proxy.preInit(event);
     }
 
