@@ -3,19 +3,17 @@ package com.snackhole.simplesorcery.commands;
 import com.snackhole.simplesorcery.SimpleSorceryUtils;
 import com.snackhole.simplesorcery.sorcery.ISorcery;
 import com.snackhole.simplesorcery.sorcery.SorceryProvider;
+import net.minecraft.command.CommandBase;
 import net.minecraft.command.CommandException;
-import net.minecraft.command.ICommand;
 import net.minecraft.command.ICommandSender;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.server.MinecraftServer;
-import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.TextComponentString;
 
-import javax.annotation.Nullable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CommandSorcery implements ICommand {
+public class CommandSorcery extends CommandBase {
     private final List commandSorceryAliases;
 
     public CommandSorcery() {
@@ -44,8 +42,7 @@ public class CommandSorcery implements ICommand {
     public void execute(MinecraftServer server, ICommandSender sender, String[] args) throws CommandException {
         EntityPlayerMP player = (EntityPlayerMP) sender.getCommandSenderEntity();
         ISorcery sorcery = player.getCapability(SorceryProvider.SORCERY_CAP, null);
-        if (!validArgs(args, sorcery)) {
-            player.sendMessage(new TextComponentString("Invalid command!  Use \"/help sorcery\" to see usage information."));
+        if (!validArgs(args, sorcery, player)) {
             return;
         }
         if (args.length == 0) {
@@ -72,31 +69,19 @@ public class CommandSorcery implements ICommand {
         return sender instanceof EntityPlayerMP;
     }
 
-    @Override
-    public List<String> getTabCompletions(MinecraftServer server, ICommandSender sender, String[] args, @Nullable BlockPos targetPos) {
-        return null;
-    }
-
-    @Override
-    public boolean isUsernameIndex(String[] args, int index) {
-        return false;
-    }
-
-    @Override
-    public int compareTo(ICommand o) {
-        return 0;
-    }
-
-    private boolean validArgs(String[] args, ISorcery sorcery) {
+    private boolean validArgs(String[] args, ISorcery sorcery, EntityPlayerMP player) {
         if (args.length > 2) {
+            player.sendMessage(new TextComponentString("Too many arguments!"));
             return false;
         }
         if (args.length >= 1) {
             if (args[0].equals("slots")) {
                 if (args.length != 1) {
+                    player.sendMessage(new TextComponentString("Can't have more than one argument if the first argument is \"slots\"!"));
                     return false;
                 }
             } else if (!sorcery.validSpellName(args[0])) {
+                player.sendMessage(new TextComponentString("Invalid spell name!"));
                 return false;
             }
         }
@@ -105,9 +90,11 @@ public class CommandSorcery implements ICommand {
             try {
                 spellSlot = Integer.parseInt(args[1]);
             } catch (NumberFormatException exception) {
+                player.sendMessage(new TextComponentString("Slot must be an integer!"));
                 return false;
             }
             if (spellSlot < 1 || spellSlot > 3) {
+                player.sendMessage(new TextComponentString("Slot must be between 1 and 3!"));
                 return false;
             }
         }
