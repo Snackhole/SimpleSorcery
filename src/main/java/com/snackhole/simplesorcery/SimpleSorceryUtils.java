@@ -1,10 +1,15 @@
 package com.snackhole.simplesorcery;
 
+import net.minecraft.util.text.ITextComponent;
+import net.minecraft.util.text.Style;
 import net.minecraft.util.text.TextComponentString;
+import net.minecraft.util.text.TextFormatting;
 
 public class SimpleSorceryUtils {
-    public static TextComponentString sorceryMessage(String message) {
-        return new TextComponentString("§6" + message);
+    private static final Style spellMessageStyle = new Style().setColor(TextFormatting.GOLD);
+
+    public static ITextComponent sorceryMessage(String message) {
+        return new TextComponentString(message).setStyle(spellMessageStyle);
     }
 
     public static int getTicksFromSeconds(int seconds) {

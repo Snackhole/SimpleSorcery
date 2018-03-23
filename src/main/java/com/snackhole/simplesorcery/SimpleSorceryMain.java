@@ -28,7 +28,7 @@ import net.minecraftforge.fml.common.network.NetworkRegistry;
 @Mod(modid = SimpleSorceryMain.MODID, version = SimpleSorceryMain.VERSION)
 public class SimpleSorceryMain {
     public static final String MODID = "simplesorcery";
-    public static final String VERSION = "1";
+    public static final String VERSION = "2";
     @SidedProxy(clientSide = "com.snackhole.simplesorcery.proxy.ClientProxy", serverSide = "com.snackhole.simplesorcery.proxy.ServerProxy")
     public static IProxy proxy;
     @Mod.Instance
