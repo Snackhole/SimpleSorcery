@@ -6,6 +6,7 @@ import net.minecraftforge.registries.IForgeRegistry;
 
 public class ModItems {
     public static ItemBase staffOfSorcery = new ItemStaffOfSorcery("staff_of_sorcery").setCreativeTab(CreativeTabs.TOOLS);
+    public static ItemBase staffOfTheArchsorcerer = new ItemStaffOfTheArchsorcerer("staff_of_the_archsorcerer").setCreativeTab(CreativeTabs.TOOLS);
     public static ItemSwordBase sorcerousSword = new ItemSorcerousSword("sorcerous_sword");
     public static ItemPickaxeBase sorcerousPickaxe = new ItemSorcerousPickaxe("sorcerous_pickaxe");
     public static ItemShovelBase sorcerousShovel = new ItemSorcerousShovel("sorcerous_shovel");
@@ -13,11 +14,12 @@ public class ModItems {
     public static ItemAxeBase sorcerousAxe = new ItemSorcerousAxe("sorcerous_axe");
 
     public static void register(IForgeRegistry<Item> registry) {
-        registry.registerAll(staffOfSorcery, sorcerousSword, sorcerousPickaxe, sorcerousShovel, sorcerousHoe, sorcerousAxe);
+        registry.registerAll(staffOfSorcery, staffOfTheArchsorcerer, sorcerousSword, sorcerousPickaxe, sorcerousShovel, sorcerousHoe, sorcerousAxe);
     }
 
     public static void registerModels() {
         staffOfSorcery.registerItemModel();
+        staffOfTheArchsorcerer.registerItemModel();
         sorcerousSword.registerItemModel();
         sorcerousPickaxe.registerItemModel();
         sorcerousShovel.registerItemModel();
