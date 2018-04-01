@@ -10,7 +10,8 @@ public class PacketHandler {
 
     public static void initPackets() {
         registerMessage(SpellCastPacket.class, SpellCastPacket.SpellCastMessage.class);
-        registerMessage(GUIRequestPacket.class, GUIRequestPacket.SorcerySyncRequest.class);
+        registerMessage(GUIRequestPacket.class, GUIRequestPacket.GUIRequestMessage.class);
+        registerMessage(SorcerySyncRequestPacket.class, SorcerySyncRequestPacket.SorcerySyncRequestMessage.class);
         registerMessage(SorcerySyncMessagePacket.class, SorcerySyncMessagePacket.SorcerySyncMessage.class);
         registerMessage(SlotSetPacket.class, SlotSetPacket.SlotSetMessage.class);
     }

@@ -47,7 +47,9 @@ public class SorcerySyncMessagePacket implements IMessageHandler<SorcerySyncMess
             sorcery.setSlot(2, message.spellSlot2);
             sorcery.setSlot(3, message.spellSlot3);
             BlockPos playerPos = player.getPosition();
-            player.openGui(SimpleSorceryMain.simpleSorceryMainInstance, guiID, player.getEntityWorld(), playerPos.getX(), playerPos.getY(), playerPos.getZ());
+            if (message.openGui) {
+                player.openGui(SimpleSorceryMain.simpleSorceryMainInstance, guiID, player.getEntityWorld(), playerPos.getX(), playerPos.getY(), playerPos.getZ());
+            }
         });
         return null;
     }
@@ -79,11 +81,12 @@ public class SorcerySyncMessagePacket implements IMessageHandler<SorcerySyncMess
         private String spellSlot1;
         private String spellSlot2;
         private String spellSlot3;
+        private boolean openGui;
 
         public SorcerySyncMessage() {
         }
 
-        public SorcerySyncMessage(ISorcery sorcery) {
+        public SorcerySyncMessage(ISorcery sorcery, boolean openGui) {
             this.absorptionSkill = sorcery.getSkill("absorption");
             this.blindnessSkill = sorcery.getSkill("blindness");
             this.dispelSkill = sorcery.getSkill("dispel");
@@ -110,6 +113,7 @@ public class SorcerySyncMessagePacket implements IMessageHandler<SorcerySyncMess
             this.spellSlot1 = sorcery.getSlot(1);
             this.spellSlot2 = sorcery.getSlot(2);
             this.spellSlot3 = sorcery.getSlot(3);
+            this.openGui = openGui;
         }
 
         @Override
@@ -140,6 +144,7 @@ public class SorcerySyncMessagePacket implements IMessageHandler<SorcerySyncMess
             this.spellSlot1 = ByteBufUtils.readUTF8String(buf);
             this.spellSlot2 = ByteBufUtils.readUTF8String(buf);
             this.spellSlot3 = ByteBufUtils.readUTF8String(buf);
+            this.openGui = buf.readBoolean();
         }
 
         @Override
@@ -170,6 +175,7 @@ public class SorcerySyncMessagePacket implements IMessageHandler<SorcerySyncMess
             ByteBufUtils.writeUTF8String(buf, this.spellSlot1);
             ByteBufUtils.writeUTF8String(buf, this.spellSlot2);
             ByteBufUtils.writeUTF8String(buf, this.spellSlot3);
+            buf.writeBoolean(this.openGui);
         }
     }
 

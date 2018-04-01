@@ -3,15 +3,18 @@ package com.snackhole.simplesorcery.sorcery;
 import com.snackhole.simplesorcery.SimpleSorceryMain;
 import com.snackhole.simplesorcery.network.GUIRequestPacket;
 import com.snackhole.simplesorcery.network.PacketHandler;
+import com.snackhole.simplesorcery.network.SorcerySyncMessagePacket;
 import com.snackhole.simplesorcery.network.SpellCastPacket;
 import com.snackhole.simplesorcery.proxy.ClientProxy;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.settings.KeyBinding;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.RayTraceResult;
 import net.minecraftforge.event.AttachCapabilitiesEvent;
+import net.minecraftforge.event.entity.EntityJoinWorldEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.InputEvent;
@@ -39,7 +42,7 @@ public class SorceryHandler {
             sendSpellCastPacket(3);
         }
         if (keyBindings[3].isPressed()) {
-            IMessage msg = new GUIRequestPacket.SorcerySyncRequest();
+            IMessage msg = new GUIRequestPacket.GUIRequestMessage();
             PacketHandler.INSTANCE.sendToServer(msg);
         }
     }
@@ -68,5 +71,16 @@ public class SorceryHandler {
         sorcery.setSlot(1, oldSorcery.getSlot(1));
         sorcery.setSlot(2, oldSorcery.getSlot(2));
         sorcery.setSlot(3, oldSorcery.getSlot(3));
+    }
+
+    @SubscribeEvent
+    public void onPlayerJoinWorld(EntityJoinWorldEvent event) {
+        Entity entity = event.getEntity();
+        if (entity instanceof EntityPlayerMP) {
+            EntityPlayerMP entityPlayerMP = (EntityPlayerMP) entity;
+            ISorcery sorcery = entityPlayerMP.getCapability(SorceryProvider.SORCERY_CAP, null);
+            IMessage msg = new SorcerySyncMessagePacket.SorcerySyncMessage(sorcery, false);
+            PacketHandler.INSTANCE.sendTo(msg, entityPlayerMP);
+        }
     }
 }

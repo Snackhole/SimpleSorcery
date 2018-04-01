@@ -2,6 +2,7 @@ package com.snackhole.simplesorcery.gui;
 
 import com.snackhole.simplesorcery.network.PacketHandler;
 import com.snackhole.simplesorcery.network.SlotSetPacket;
+import com.snackhole.simplesorcery.network.SorcerySyncRequestPacket;
 import com.snackhole.simplesorcery.proxy.ClientProxy;
 import com.snackhole.simplesorcery.sorcery.ISorcery;
 import com.snackhole.simplesorcery.sorcery.SorceryProvider;
@@ -199,6 +200,8 @@ public class SorceryGui extends GuiScreen {
     public void actionPerformed(GuiButton button) {
         if (button.id == doneButton.id) {
             player.closeScreen();
+            IMessage msg = new SorcerySyncRequestPacket.SorcerySyncRequestMessage();
+            PacketHandler.INSTANCE.sendToServer(msg);
         } else if (button.id == scrollUpButton.id) {
             scrollSpellList(20);
         } else if (button.id == scrollDownButton.id) {
