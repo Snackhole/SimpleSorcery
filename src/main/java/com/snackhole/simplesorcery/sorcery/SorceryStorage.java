@@ -35,6 +35,7 @@ public class SorceryStorage implements Capability.IStorage<ISorcery> {
         sorceryNBT.setString("spellSlot1", instance.getSlot(1));
         sorceryNBT.setString("spellSlot2", instance.getSlot(2));
         sorceryNBT.setString("spellSlot3", instance.getSlot(3));
+        sorceryNBT.setBoolean("hudActive", instance.getHUDActive());
         return sorceryNBT;
     }
 
@@ -66,5 +67,6 @@ public class SorceryStorage implements Capability.IStorage<ISorcery> {
         instance.setSlot(1, ((NBTTagCompound) nbt).getString("spellSlot1"));
         instance.setSlot(2, ((NBTTagCompound) nbt).getString("spellSlot2"));
         instance.setSlot(3, ((NBTTagCompound) nbt).getString("spellSlot3"));
+        instance.setHUDActive(((NBTTagCompound) nbt).getBoolean("hudActive"));
     }
 }

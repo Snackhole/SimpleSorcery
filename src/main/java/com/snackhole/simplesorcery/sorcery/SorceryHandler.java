@@ -1,10 +1,7 @@
 package com.snackhole.simplesorcery.sorcery;
 
 import com.snackhole.simplesorcery.SimpleSorceryMain;
-import com.snackhole.simplesorcery.network.GUIRequestPacket;
-import com.snackhole.simplesorcery.network.PacketHandler;
-import com.snackhole.simplesorcery.network.SorcerySyncMessagePacket;
-import com.snackhole.simplesorcery.network.SpellCastPacket;
+import com.snackhole.simplesorcery.network.*;
 import com.snackhole.simplesorcery.proxy.ClientProxy;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.settings.KeyBinding;
@@ -45,6 +42,10 @@ public class SorceryHandler {
             IMessage msg = new GUIRequestPacket.GUIRequestMessage();
             PacketHandler.INSTANCE.sendToServer(msg);
         }
+        if (keyBindings[4].isPressed()) {
+            IMessage msg = new HUDToggleRequestPacket.HUDToggleRequestMessage();
+            PacketHandler.INSTANCE.sendToServer(msg);
+        }
     }
 
     public void sendSpellCastPacket(int spellSlot) {
@@ -71,6 +72,7 @@ public class SorceryHandler {
         sorcery.setSlot(1, oldSorcery.getSlot(1));
         sorcery.setSlot(2, oldSorcery.getSlot(2));
         sorcery.setSlot(3, oldSorcery.getSlot(3));
+        sorcery.setHUDActive(oldSorcery.getHUDActive());
     }
 
     @SubscribeEvent

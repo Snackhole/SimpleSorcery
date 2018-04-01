@@ -35,6 +35,7 @@ public class Sorcery implements ISorcery {
     private String spellSlot1;
     private String spellSlot2;
     private String spellSlot3;
+    private boolean hudActive;
 
     public Sorcery() {
         // Initialize Variables
@@ -64,6 +65,7 @@ public class Sorcery implements ISorcery {
         spellSlot1 = "";
         spellSlot2 = "";
         spellSlot3 = "";
+        hudActive = true;
 
         // Construct List of Spell Names
         spellNames.add("absorption");
@@ -255,5 +257,20 @@ public class Sorcery implements ISorcery {
     @Override
     public ArrayList<String> getSpellNamesList() {
         return spellNames;
+    }
+
+    @Override
+    public boolean getHUDActive() {
+        return hudActive;
+    }
+
+    @Override
+    public void setHUDActive(boolean isHUDActive) {
+        hudActive = isHUDActive;
+    }
+
+    @Override
+    public void toggleHUDActive() {
+        hudActive = !hudActive;
     }
 }

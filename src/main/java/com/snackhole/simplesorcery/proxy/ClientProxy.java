@@ -9,6 +9,8 @@ import net.minecraft.client.settings.KeyBinding;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.model.ModelLoader;
+import net.minecraftforge.client.settings.KeyConflictContext;
+import net.minecraftforge.client.settings.KeyModifier;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.client.registry.ClientRegistry;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -27,11 +29,12 @@ public class ClientProxy implements IProxy {
 
     @Override
     public void init(FMLInitializationEvent event) {
-        keyBindings = new KeyBinding[4];
+        keyBindings = new KeyBinding[5];
         keyBindings[0] = new KeyBinding("key.spell1.desc", Keyboard.KEY_V, "key.simplesorcery.category");
         keyBindings[1] = new KeyBinding("key.spell2.desc", Keyboard.KEY_B, "key.simplesorcery.category");
         keyBindings[2] = new KeyBinding("key.spell3.desc", Keyboard.KEY_N, "key.simplesorcery.category");
         keyBindings[3] = new KeyBinding("key.spellmod.desc", Keyboard.KEY_G, "key.simplesorcery.category");
+        keyBindings[4] = new KeyBinding("key.hudtoggle.desc", KeyConflictContext.UNIVERSAL, KeyModifier.SHIFT, Keyboard.KEY_G, "key.simplesorcery.category");
         for (KeyBinding keyBinding : keyBindings) {
             ClientRegistry.registerKeyBinding(keyBinding);
         }

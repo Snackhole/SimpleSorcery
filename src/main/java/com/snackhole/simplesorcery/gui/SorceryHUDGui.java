@@ -58,6 +58,9 @@ public class SorceryHUDGui extends Gui {
             return;
         }
         sorcery = minecraft.player.getCapability(SorceryProvider.SORCERY_CAP, null);
+        if (!sorcery.getHUDActive()) {
+            return;
+        }
         scaledResolution = new ScaledResolution(minecraft);
         minecraft.renderEngine.bindTexture(guiTexture);
         int guiXStart = scaledResolution.getScaledWidth() - textureWidth - 1;

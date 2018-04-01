@@ -3,6 +3,7 @@ key.spell1.desc=Spell Slot 1 Key
 key.spell2.desc=Spell Slot 2 Key
 key.spell3.desc=Spell Slot 3 Key
 key.spellmod.desc=Switch Spells
+key.hudtoggle.desc=Toggle Slot HUD
 key.simplesorcery.category=Simple Sorcery
 
 # Items

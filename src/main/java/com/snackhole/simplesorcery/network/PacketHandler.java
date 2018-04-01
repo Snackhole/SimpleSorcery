@@ -14,6 +14,7 @@ public class PacketHandler {
         registerMessage(SorcerySyncRequestPacket.class, SorcerySyncRequestPacket.SorcerySyncRequestMessage.class);
         registerMessage(SorcerySyncMessagePacket.class, SorcerySyncMessagePacket.SorcerySyncMessage.class);
         registerMessage(SlotSetPacket.class, SlotSetPacket.SlotSetMessage.class);
+        registerMessage(HUDToggleRequestPacket.class, HUDToggleRequestPacket.HUDToggleRequestMessage.class);
     }
 
     private static void registerMessage(Class packet, Class message) {

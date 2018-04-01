@@ -46,8 +46,9 @@ public class SorcerySyncMessagePacket implements IMessageHandler<SorcerySyncMess
             sorcery.setSlot(1, message.spellSlot1);
             sorcery.setSlot(2, message.spellSlot2);
             sorcery.setSlot(3, message.spellSlot3);
-            BlockPos playerPos = player.getPosition();
+            sorcery.setHUDActive(message.hudActive);
             if (message.openGui) {
+                BlockPos playerPos = player.getPosition();
                 player.openGui(SimpleSorceryMain.simpleSorceryMainInstance, guiID, player.getEntityWorld(), playerPos.getX(), playerPos.getY(), playerPos.getZ());
             }
         });
@@ -81,6 +82,7 @@ public class SorcerySyncMessagePacket implements IMessageHandler<SorcerySyncMess
         private String spellSlot1;
         private String spellSlot2;
         private String spellSlot3;
+        private boolean hudActive;
         private boolean openGui;
 
         public SorcerySyncMessage() {
@@ -113,6 +115,7 @@ public class SorcerySyncMessagePacket implements IMessageHandler<SorcerySyncMess
             this.spellSlot1 = sorcery.getSlot(1);
             this.spellSlot2 = sorcery.getSlot(2);
             this.spellSlot3 = sorcery.getSlot(3);
+            this.hudActive = sorcery.getHUDActive();
             this.openGui = openGui;
         }
 
@@ -144,6 +147,7 @@ public class SorcerySyncMessagePacket implements IMessageHandler<SorcerySyncMess
             this.spellSlot1 = ByteBufUtils.readUTF8String(buf);
             this.spellSlot2 = ByteBufUtils.readUTF8String(buf);
             this.spellSlot3 = ByteBufUtils.readUTF8String(buf);
+            this.hudActive = buf.readBoolean();
             this.openGui = buf.readBoolean();
         }
 
@@ -175,6 +179,7 @@ public class SorcerySyncMessagePacket implements IMessageHandler<SorcerySyncMess
             ByteBufUtils.writeUTF8String(buf, this.spellSlot1);
             ByteBufUtils.writeUTF8String(buf, this.spellSlot2);
             ByteBufUtils.writeUTF8String(buf, this.spellSlot3);
+            buf.writeBoolean(this.hudActive);
             buf.writeBoolean(this.openGui);
         }
     }

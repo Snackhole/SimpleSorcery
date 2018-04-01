@@ -26,4 +26,10 @@ public interface ISorcery {
     String getSpellProperName(String spellName);
 
     ArrayList<String> getSpellNamesList();
+
+    boolean getHUDActive();
+
+    void setHUDActive(boolean isHUDActive);
+
+    void toggleHUDActive();
 }
