@@ -1,54 +1,55 @@
 Pattern:
-	Enchantment (Book + Determinant)
+	Enchantment (Determinant)
+		Sub-Recipe (Determinant)
 
-Sub-recipes require the parent as the Book.
-
-Recipes as follows, where D is the Determinant, R is redstone dust, and B is the Book:
+Recipes as follows, where D is the Determinant, R is redstone dust, and B is the enchanting book:
 	DRD
 	RBR
 	DRD
 
+Top-level recipes have the same Determinant in all four corners.  Sub-recipes have the Determinant of their top-level recipe in the left corners, and the Determinant of the sub-recipe in the right corners.
+
 ---
 
-Aqua Affinity (Enchanting Book + Water Bottle)
+Aqua Affinity (Water Bottle)
 	Depth Strider (Raw Fish)
-	Respiration (Prismarine Shard)
+	Respiration (Potion of Water Breathing)
 
-Curse of Binding (Enchanting Book + Lead)
+Curse of Binding (Lead)
 
-Curse of Vanishing (Enchanting Book + Ender Pearl)
+Curse of Vanishing (Ender Pearl)
 
-Efficiency (Enchanting Book + Redstone)
+Efficiency (Potion of Swiftness)
 	Infinity (Arrow)
 	Lure (Prismarine Crystal)
-	Silk Touch (Ghast Tear)
+	Silk Touch (Shears)
 
-Feather Falling (Enchanting Book + Feather)
+Feather Falling (Potion of Leaping)
 
-Fire Aspect (Enchanting Book + Blaze Powder)
+Fire Aspect (Blaze Powder)
 	Flame (Arrow)
 
-Fortune (Enchanting Book + Diamond)
+Fortune (Diamond)
 	Looting (Gold Ingot)
 	Luck of the Sea (Rabbit's Foot)
 
-Frost Walker (Enchanting Book + Ice)
+Frost Walker (Ice)
 
-Knockback (Enchanting Book + Piston)
+Knockback (Piston)
 	Punch (Arrow)
 
-Mending (Enchanting Book + Ghast Tear)
+Mending (Potion of Regeneration)
 
-Protection (Enchanting Book + Iron Ingot)
+Protection (Iron Ingot)
 	Blast Protection (Obsidian)
-	Fire Protection (Magma Cream)
+	Fire Protection (Potion of Fire Resistance)
 	Projectile Protection (Arrow)
 	Thorns (Cactus)
 
-Sharpness (Enchanting Book + Nether Quartz)
+Sharpness (Potion of Strength)
 	Bane of Arthropods (Spider Eye)
 	Power (Arrow)
 	Smite (Rotten Flesh)
 	Sweeping Edge (Gunpowder)
 
-Unbreaking (Enchanting Book + Obsidian)
+Unbreaking (Obsidian)

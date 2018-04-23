@@ -1,0 +1,264 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "simplesorcery:enchanted_book_aqua_affinity",
+      "simplesorcery:enchanted_book_bane_of_arthropods",
+      "simplesorcery:enchanted_book_blast_protection",
+      "simplesorcery:enchanted_book_curse_of_binding",
+      "simplesorcery:enchanted_book_curse_of_vanishing",
+      "simplesorcery:enchanted_book_depth_strider",
+      "simplesorcery:enchanted_book_efficiency",
+      "simplesorcery:enchanted_book_feather_falling",
+      "simplesorcery:enchanted_book_fire_aspect",
+      "simplesorcery:enchanted_book_fire_protection",
+      "simplesorcery:enchanted_book_flame",
+      "simplesorcery:enchanted_book_fortune",
+      "simplesorcery:enchanted_book_frost_walker",
+      "simplesorcery:enchanted_book_infinity",
+      "simplesorcery:enchanted_book_knockback",
+      "simplesorcery:enchanted_book_looting",
+      "simplesorcery:enchanted_book_luck_of_the_sea",
+      "simplesorcery:enchanted_book_lure",
+      "simplesorcery:enchanted_book_mending",
+      "simplesorcery:enchanted_book_power",
+      "simplesorcery:enchanted_book_projectile_protection",
+      "simplesorcery:enchanted_book_protection",
+      "simplesorcery:enchanted_book_punch",
+      "simplesorcery:enchanted_book_respiration",
+      "simplesorcery:enchanted_book_sharpness",
+      "simplesorcery:enchanted_book_silk_touch",
+      "simplesorcery:enchanted_book_smite",
+      "simplesorcery:enchanted_book_sweeping_edge",
+      "simplesorcery:enchanted_book_thorns",
+      "simplesorcery:enchanted_book_unbreaking"
+    ]
+  },
+  "criteria": {
+    "has_the_recipe1": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "simplesorcery:enchanted_book_aqua_affinity"
+      }
+    },
+    "has_the_recipe2": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "simplesorcery:enchanted_book_bane_of_arthropods"
+      }
+    },
+    "has_the_recipe3": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "simplesorcery:enchanted_book_blast_protection"
+      }
+    },
+    "has_the_recipe4": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "simplesorcery:enchanted_book_curse_of_binding"
+      }
+    },
+    "has_the_recipe5": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "simplesorcery:enchanted_book_curse_of_vanishing"
+      }
+    },
+    "has_the_recipe6": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "simplesorcery:enchanted_book_depth_strider"
+      }
+    },
+    "has_the_recipe7": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "simplesorcery:enchanted_book_efficiency"
+      }
+    },
+    "has_the_recipe8": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "simplesorcery:enchanted_book_feather_falling"
+      }
+    },
+    "has_the_recipe9": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "simplesorcery:enchanted_book_fire_aspect"
+      }
+    },
+    "has_the_recipe10": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "simplesorcery:enchanted_book_fire_protection"
+      }
+    },
+    "has_the_recipe11": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "simplesorcery:enchanted_book_flame"
+      }
+    },
+    "has_the_recipe12": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "simplesorcery:enchanted_book_fortune"
+      }
+    },
+    "has_the_recipe13": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "simplesorcery:enchanted_book_frost_walker"
+      }
+    },
+    "has_the_recipe14": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "simplesorcery:enchanted_book_infinity"
+      }
+    },
+    "has_the_recipe15": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "simplesorcery:enchanted_book_knockback"
+      }
+    },
+    "has_the_recipe16": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "simplesorcery:enchanted_book_looting"
+      }
+    },
+    "has_the_recipe17": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "simplesorcery:enchanted_book_luck_of_the_sea"
+      }
+    },
+    "has_the_recipe18": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "simplesorcery:enchanted_book_lure"
+      }
+    },
+    "has_the_recipe19": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "simplesorcery:enchanted_book_mending"
+      }
+    },
+    "has_the_recipe20": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "simplesorcery:enchanted_book_power"
+      }
+    },
+    "has_the_recipe21": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "simplesorcery:enchanted_book_projectile_protection"
+      }
+    },
+    "has_the_recipe22": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "simplesorcery:enchanted_book_protection"
+      }
+    },
+    "has_the_recipe23": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "simplesorcery:enchanted_book_punch"
+      }
+    },
+    "has_the_recipe24": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "simplesorcery:enchanted_book_respiration"
+      }
+    },
+    "has_the_recipe25": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "simplesorcery:enchanted_book_sharpness"
+      }
+    },
+    "has_the_recipe26": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "simplesorcery:enchanted_book_silk_touch"
+      }
+    },
+    "has_the_recipe27": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "simplesorcery:enchanted_book_smite"
+      }
+    },
+    "has_the_recipe28": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "simplesorcery:enchanted_book_sweeping_edge"
+      }
+    },
+    "has_the_recipe29": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "simplesorcery:enchanted_book_thorns"
+      }
+    },
+    "has_the_recipe30": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "simplesorcery:enchanted_book_unbreaking"
+      }
+    },
+    "has_book": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "simplesorcery:enchanting_book"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe1",
+      "has_the_recipe2",
+      "has_the_recipe3",
+      "has_the_recipe4",
+      "has_the_recipe5",
+      "has_the_recipe6",
+      "has_the_recipe7",
+      "has_the_recipe8",
+      "has_the_recipe9",
+      "has_the_recipe10",
+      "has_the_recipe11",
+      "has_the_recipe12",
+      "has_the_recipe13",
+      "has_the_recipe14",
+      "has_the_recipe15",
+      "has_the_recipe16",
+      "has_the_recipe17",
+      "has_the_recipe18",
+      "has_the_recipe19",
+      "has_the_recipe20",
+      "has_the_recipe21",
+      "has_the_recipe22",
+      "has_the_recipe23",
+      "has_the_recipe24",
+      "has_the_recipe25",
+      "has_the_recipe26",
+      "has_the_recipe27",
+      "has_the_recipe28",
+      "has_the_recipe29",
+      "has_the_recipe30",
+      "has_book"
+    ]
+  ]
+}

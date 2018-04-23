@@ -16,14 +16,14 @@
       "type": "minecraft:item_nbt",
       "item": "minecraft:potion",
       "nbt": {
-        "Potion": "minecraft:water"
+        "Potion": "minecraft:swiftness"
       }
     },
     "M": {
       "type": "minecraft:item_nbt",
       "item": "minecraft:potion",
       "nbt": {
-        "Potion": "minecraft:water"
+        "Potion": "minecraft:swiftness"
       }
     }
   },
@@ -32,7 +32,7 @@
     "item": "minecraft:enchanted_book",
     "nbt": {
       "StoredEnchantments": [{
-        "id": 6,
+        "id": 32,
         "lvl": 1
       }]
     }

@@ -13,17 +13,13 @@
       "item": "minecraft:redstone"
     },
     "D": {
-      "type": "minecraft:item_nbt",
-      "item": "minecraft:potion",
-      "nbt": {
-        "Potion": "minecraft:water"
-      }
+      "item": "minecraft:iron_ingot"
     },
     "M": {
       "type": "minecraft:item_nbt",
       "item": "minecraft:potion",
       "nbt": {
-        "Potion": "minecraft:water"
+        "Potion": "minecraft:fire_resistance"
       }
     }
   },
@@ -32,7 +28,7 @@
     "item": "minecraft:enchanted_book",
     "nbt": {
       "StoredEnchantments": [{
-        "id": 6,
+        "id": 1,
         "lvl": 1
       }]
     }

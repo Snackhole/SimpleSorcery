@@ -13,18 +13,10 @@
       "item": "minecraft:redstone"
     },
     "D": {
-      "type": "minecraft:item_nbt",
-      "item": "minecraft:potion",
-      "nbt": {
-        "Potion": "minecraft:water"
-      }
+      "item": "minecraft:ice"
     },
     "M": {
-      "type": "minecraft:item_nbt",
-      "item": "minecraft:potion",
-      "nbt": {
-        "Potion": "minecraft:water"
-      }
+      "item": "minecraft:ice"
     }
   },
   "result": {
@@ -32,7 +24,7 @@
     "item": "minecraft:enchanted_book",
     "nbt": {
       "StoredEnchantments": [{
-        "id": 6,
+        "id": 9,
         "lvl": 1
       }]
     }

@@ -23,7 +23,7 @@
       "type": "minecraft:item_nbt",
       "item": "minecraft:potion",
       "nbt": {
-        "Potion": "minecraft:water"
+        "Potion": "minecraft:water_breathing"
       }
     }
   },
@@ -32,7 +32,7 @@
     "item": "minecraft:enchanted_book",
     "nbt": {
       "StoredEnchantments": [{
-        "id": 6,
+        "id": 5,
         "lvl": 1
       }]
     }
