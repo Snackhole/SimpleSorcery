@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "QLQ",
+    "LBL",
+    "QLQ"
+  ],
+  "key": {
+    "B": {
+      "item": "minecraft:book"
+    },
+    "Q": {
+      "item": "minecraft:quartz"
+    },
+    "L": {
+      "item": "minecraft:dye",
+      "data": 4
+    }
+  },
+  "result": {
+    "item": "simplesorcery:enchanting_book"
+  }
+}

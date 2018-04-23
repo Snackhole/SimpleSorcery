@@ -12,9 +12,10 @@ public class ModItems {
     public static ItemShovelBase sorcerousShovel = new ItemSorcerousShovel("sorcerous_shovel");
     public static ItemHoeBase sorcerousHoe = new ItemSorcerousHoe("sorcerous_hoe");
     public static ItemAxeBase sorcerousAxe = new ItemSorcerousAxe("sorcerous_axe");
+    public static ItemBase enchantingBook = new ItemBase("enchanting_book").setCreativeTab(CreativeTabs.MISC);
 
     public static void register(IForgeRegistry<Item> registry) {
-        registry.registerAll(staffOfSorcery, staffOfTheArchsorcerer, sorcerousSword, sorcerousPickaxe, sorcerousShovel, sorcerousHoe, sorcerousAxe);
+        registry.registerAll(staffOfSorcery, staffOfTheArchsorcerer, sorcerousSword, sorcerousPickaxe, sorcerousShovel, sorcerousHoe, sorcerousAxe, enchantingBook);
     }
 
     public static void registerModels() {
@@ -25,5 +26,6 @@ public class ModItems {
         sorcerousShovel.registerItemModel();
         sorcerousHoe.registerItemModel();
         sorcerousAxe.registerItemModel();
+        enchantingBook.registerItemModel();
     }
 }

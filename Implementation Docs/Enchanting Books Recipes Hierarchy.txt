@@ -1,0 +1,54 @@
+Pattern:
+	Enchantment (Book + Determinant)
+
+Sub-recipes require the parent as the Book.
+
+Recipes as follows, where D is the Determinant, R is redstone dust, and B is the Book:
+	DRD
+	RBR
+	DRD
+
+---
+
+Aqua Affinity (Enchanting Book + Water Bottle)
+	Depth Strider (Raw Fish)
+	Respiration (Prismarine Shard)
+
+Curse of Binding (Enchanting Book + Lead)
+
+Curse of Vanishing (Enchanting Book + Ender Pearl)
+
+Efficiency (Enchanting Book + Redstone)
+	Infinity (Arrow)
+	Lure (Prismarine Crystal)
+	Silk Touch (Ghast Tear)
+
+Feather Falling (Enchanting Book + Feather)
+
+Fire Aspect (Enchanting Book + Blaze Powder)
+	Flame (Arrow)
+
+Fortune (Enchanting Book + Diamond)
+	Looting (Gold Ingot)
+	Luck of the Sea (Rabbit's Foot)
+
+Frost Walker (Enchanting Book + Ice)
+
+Knockback (Enchanting Book + Piston)
+	Punch (Arrow)
+
+Mending (Enchanting Book + Ghast Tear)
+
+Protection (Enchanting Book + Iron Ingot)
+	Blast Protection (Obsidian)
+	Fire Protection (Magma Cream)
+	Projectile Protection (Arrow)
+	Thorns (Cactus)
+
+Sharpness (Enchanting Book + Nether Quartz)
+	Bane of Arthropods (Spider Eye)
+	Power (Arrow)
+	Smite (Rotten Flesh)
+	Sweeping Edge (Gunpowder)
+
+Unbreaking (Enchanting Book + Obsidian)

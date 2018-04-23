@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "enchanted_books",
+  "pattern": [
+    "DRD",
+    "RER",
+    "DRD"
+  ],
+  "key": {
+    "E": {
+      "item": "simplesorcery:enchanting_book"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    },
+    "D": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "type": "minecraft:item_nbt",
+    "item": "minecraft:enchanted_book",
+    "nbt": {
+      "StoredEnchantments": [{
+        "id": 6,
+        "lvl": 1
+      }]
+    }
+  }
+}
