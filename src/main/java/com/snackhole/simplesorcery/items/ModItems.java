@@ -13,9 +13,13 @@ public class ModItems {
     public static ItemHoeBase sorcerousHoe = new ItemSorcerousHoe("sorcerous_hoe");
     public static ItemAxeBase sorcerousAxe = new ItemSorcerousAxe("sorcerous_axe");
     public static ItemBase enchantingBook = new ItemBase("enchanting_book").setCreativeTab(CreativeTabs.MISC);
+    public static ItemArmorBase sorcerousHelmet = new ItemSorcerousHelmet("sorcerous_helmet");
+    public static ItemArmorBase sorcerousChestplate = new ItemSorcerousChestplate("sorcerous_chestplate");
+    public static ItemArmorBase sorcerousLeggings = new ItemSorcerousLeggings("sorcerous_leggings");
+    public static ItemArmorBase sorcerousBoots = new ItemSorcerousBoots("sorcerous_boots");
 
     public static void register(IForgeRegistry<Item> registry) {
-        registry.registerAll(staffOfSorcery, staffOfTheArchsorcerer, sorcerousSword, sorcerousPickaxe, sorcerousShovel, sorcerousHoe, sorcerousAxe, enchantingBook);
+        registry.registerAll(staffOfSorcery, staffOfTheArchsorcerer, sorcerousSword, sorcerousPickaxe, sorcerousShovel, sorcerousHoe, sorcerousAxe, enchantingBook, sorcerousHelmet, sorcerousChestplate, sorcerousLeggings, sorcerousBoots);
     }
 
     public static void registerModels() {
@@ -27,5 +31,9 @@ public class ModItems {
         sorcerousHoe.registerItemModel();
         sorcerousAxe.registerItemModel();
         enchantingBook.registerItemModel();
+        sorcerousHelmet.registerItemModel();
+        sorcerousChestplate.registerItemModel();
+        sorcerousLeggings.registerItemModel();
+        sorcerousBoots.registerItemModel();
     }
 }

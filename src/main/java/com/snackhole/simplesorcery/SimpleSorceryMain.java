@@ -6,7 +6,9 @@ import com.snackhole.simplesorcery.items.ModItems;
 import com.snackhole.simplesorcery.network.PacketHandler;
 import com.snackhole.simplesorcery.proxy.IProxy;
 import com.snackhole.simplesorcery.sorcery.*;
+import net.minecraft.init.SoundEvents;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemArmor;
 import net.minecraft.world.storage.loot.LootEntry;
 import net.minecraft.world.storage.loot.LootEntryItem;
 import net.minecraft.world.storage.loot.conditions.LootCondition;
@@ -14,6 +16,7 @@ import net.minecraft.world.storage.loot.functions.LootFunction;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.capabilities.CapabilityManager;
+import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.event.LootTableLoadEvent;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -28,12 +31,13 @@ import net.minecraftforge.fml.common.network.NetworkRegistry;
 @Mod(modid = SimpleSorceryMain.MODID, version = SimpleSorceryMain.VERSION)
 public class SimpleSorceryMain {
     public static final String MODID = "simplesorcery";
-    public static final String VERSION = "4";
+    public static final String VERSION = "5";
     @SidedProxy(clientSide = "com.snackhole.simplesorcery.proxy.ClientProxy", serverSide = "com.snackhole.simplesorcery.proxy.ServerProxy")
     public static IProxy proxy;
     @Mod.Instance
     public static SimpleSorceryMain simpleSorceryMainInstance;
     public static Spellcasting spellcasting;
+    public static ItemArmor.ArmorMaterial sorcerousArmorMaterial = EnumHelper.addArmorMaterial("SORCEROUS", MODID + ":sorcerous", 15, new int[]{2, 5, 6, 2}, 25, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, (float) 0);
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
