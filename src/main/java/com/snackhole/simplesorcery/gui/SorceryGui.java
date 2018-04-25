@@ -284,6 +284,8 @@ public class SorceryGui extends GuiScreen {
         super.keyTyped(typedChar, keyCode);
         if (keyCode == ClientProxy.keyBindings[3].getKeyCode()) {
             player.closeScreen();
+            IMessage msg = new SorcerySyncRequestPacket.SorcerySyncRequestMessage();
+            PacketHandler.INSTANCE.sendToServer(msg);
         }
     }
 }
