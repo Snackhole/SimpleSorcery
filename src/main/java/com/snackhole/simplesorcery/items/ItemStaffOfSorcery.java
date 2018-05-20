@@ -25,22 +25,24 @@ public class ItemStaffOfSorcery extends ItemBase {
     @Override
     public ActionResult<ItemStack> onItemRightClick(World worldIn, EntityPlayer playerIn, EnumHand handIn) {
         ItemStack itemStack = playerIn.getHeldItem(handIn);
-        if (!worldIn.isRemote) {
-            int itemDamage = itemStack.getItemDamage();
-            boolean creativeMode = playerIn.capabilities.isCreativeMode;
-            if (itemDamage != 0) {
-                int cost = Math.min(10, itemDamage);
-                FoodStats playerFoodStats = playerIn.getFoodStats();
-                int currentPlayerFood = creativeMode ? 10 : playerFoodStats.getFoodLevel();
-                if (cost <= currentPlayerFood) {
-                    itemStack.setItemDamage(itemDamage - cost);
-                    playerFoodStats.setFoodLevel(currentPlayerFood - (creativeMode ? 0 : cost));
-                } else {
-                    playerIn.sendMessage(SimpleSorceryUtils.sorceryMessage("You must eat more food to charge this staff!"));
+        if (playerIn.isSneaking()) {
+            if (!worldIn.isRemote) {
+                int itemDamage = itemStack.getItemDamage();
+                boolean creativeMode = playerIn.capabilities.isCreativeMode;
+                if (itemDamage != 0) {
+                    int cost = Math.min(10, itemDamage);
+                    FoodStats playerFoodStats = playerIn.getFoodStats();
+                    int currentPlayerFood = creativeMode ? 10 : playerFoodStats.getFoodLevel();
+                    if (cost <= currentPlayerFood) {
+                        itemStack.setItemDamage(itemDamage - cost);
+                        playerFoodStats.setFoodLevel(currentPlayerFood - (creativeMode ? 0 : cost));
+                    } else {
+                        playerIn.sendMessage(SimpleSorceryUtils.sorceryMessage("You must eat more food to charge this staff!"));
+                    }
                 }
             }
         }
-        return new ActionResult<ItemStack>(EnumActionResult.SUCCESS, itemStack);
+        return new ActionResult<ItemStack>(EnumActionResult.PASS, itemStack);
     }
 
     @SideOnly(Side.CLIENT)
@@ -50,6 +52,6 @@ public class ItemStaffOfSorcery extends ItemBase {
         tooltip.add("When in either hand:");
         tooltip.add(" Halves cost of spells (rounded up).");
         tooltip.add(" Stores magic power to cast spells with.");
-        tooltip.add(" Right-click to charge with magic power.");
+        tooltip.add(" Right-click while sneaking to charge with magic power.");
     }
 }
