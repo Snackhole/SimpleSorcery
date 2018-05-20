@@ -9,6 +9,7 @@ import com.snackhole.simplesorcery.sorcery.*;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
+import net.minecraft.item.ItemTool;
 import net.minecraft.world.storage.loot.LootEntry;
 import net.minecraft.world.storage.loot.LootEntryItem;
 import net.minecraft.world.storage.loot.conditions.LootCondition;
@@ -37,6 +38,7 @@ public class SimpleSorceryMain {
     @Mod.Instance
     public static SimpleSorceryMain simpleSorceryMainInstance;
     public static Spellcasting spellcasting;
+    public static ItemTool.ToolMaterial sorcerousToolMaterial = EnumHelper.addToolMaterial("SORCEROUS", 3, 250, (float) 8, (float) 4, 10);
     public static ItemArmor.ArmorMaterial sorcerousArmorMaterial = EnumHelper.addArmorMaterial("SORCEROUS", MODID + ":sorcerous", 15, new int[]{2, 5, 6, 2}, 25, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, (float) 0);
 
     @Mod.EventHandler

@@ -1,5 +1,6 @@
 package com.snackhole.simplesorcery.items;
 
+import com.snackhole.simplesorcery.SimpleSorceryMain;
 import com.snackhole.simplesorcery.SimpleSorceryUtils;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.player.EntityPlayer;
@@ -17,7 +18,7 @@ import java.util.List;
 
 public class ItemSorcerousHoe extends ItemHoeBase {
     public ItemSorcerousHoe(String name) {
-        super(ToolMaterial.IRON, name);
+        super(SimpleSorceryMain.sorcerousToolMaterial, name);
     }
 
     @Override

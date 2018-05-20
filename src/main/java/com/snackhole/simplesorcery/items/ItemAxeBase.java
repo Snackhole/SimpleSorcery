@@ -7,8 +7,8 @@ import net.minecraft.item.ItemAxe;
 public class ItemAxeBase extends ItemAxe {
     private String name;
 
-    public ItemAxeBase(Item.ToolMaterial material, String name) {
-        super(material);
+    public ItemAxeBase(Item.ToolMaterial material, String name, float damage, float speed) {
+        super(material, damage, speed);
         this.name = name;
         setUnlocalizedName(name);
         setRegistryName(name);
